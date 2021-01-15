@@ -142,6 +142,10 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
+
+# Copy fonts to system
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/lineage/prebuilt/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts)
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.ntfs \
